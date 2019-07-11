@@ -13,7 +13,7 @@ var seatObj = require('./models/SeatSchema.js');
 app.use(body.json());
 
 var crosobj = {
-    orign:"http://52.201.242.116:4200",
+    orign:"http://52.201.242.116:8080",
     optionSucessStatus:200
 }
 app.use(cros(crosobj));
