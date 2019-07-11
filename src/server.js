@@ -13,7 +13,7 @@ var seatObj = require('./models/SeatSchema.js');
 app.use(body.json());
 
 var crosobj = {
-    orign:"http://localhost:4200",
+    orign:"http://52.201.242.116:4200",
     optionSucessStatus:200
 }
 app.use(cros(crosobj));
@@ -35,7 +35,7 @@ app.post("/api/allocate_seat", (req, res)=>{
     var year_value = today.getFullYear();
     console.log("year"+ year_value);
 
-     var db = mongoose.connect('mongodb://localhost:27017/admission' ,{ useNewUrlParser: true });
+     var db = mongoose.connect('mongodb://52.201.242.116:27017/admission' ,{ useNewUrlParser: true });
 
     for (i = 0; i<department_arr.length; i++)
         {
@@ -79,7 +79,7 @@ app.post("/api/allocate_seat", (req, res)=>{
 	  //var dbname= req.body.params.depValue;
 	  //var semValue= req.body.params.name; //sem value 
     //connecting to db
-    var db = mongoose.connect('mongodb://localhost:27017/admission' ,{ useNewUrlParser: true });
+    var db = mongoose.connect('mongodb://52.201.242.116:27017/admission' ,{ useNewUrlParser: true });
     /* 1st {}  similiar to where condition,
      2nd {} selecting required fields to show,
       3rd{} for sorting- "1" for ascending "-1" for descending*/
@@ -154,7 +154,7 @@ const info=mongoose.model('studentinfo',{
 })
 
 //const register=mongoose.model('register',{Email :String,password1:String, Confrimpassword : String})
-mongoose.connect('mongodb://localhost:27017/admission',{ useNewUrlParser: true });
+mongoose.connect('mongodb://52.201.242.116:27017/admission',{ useNewUrlParser: true });
 const Array=mongoose.model('Array',{ array:String})
 const register=mongoose.model('register',
 {
@@ -348,7 +348,7 @@ var today = new Date();
     var year_value = today.getFullYear();
     console.log("year"+ year_value);
 
-var db = mongoose.connect('mongodb://localhost:27017/admission' ,{ useNewUrlParser: true });
+var db = mongoose.connect('mongodb://52.201.242.116:27017/admission' ,{ useNewUrlParser: true });
 var seatObjVar = new seatObj();
 console.log(dep);
 seatObj.updateOne( { 'depname' : dep , 'year': year_value } ,
@@ -390,7 +390,7 @@ var today = new Date();
     var year_value = today.getFullYear();
     console.log("year"+ year_value);
 
-var db = mongoose.connect('mongodb://localhost:27017/admission' ,{ useNewUrlParser: true });
+var db = mongoose.connect('mongodb://52.201.242.116:27017/admission' ,{ useNewUrlParser: true });
 var seatObjVar = new seatObj();
 console.log(dep);
 seatObj.updateOne( { 'depname' : dep , 'year': year_value } ,
@@ -469,7 +469,7 @@ app.post("/api/del_content", (req, res)=>{
    
     //var dbname= req.body.params.year;
     //console.log("dep name:" + dbname);
-    var db = mongoose.connect('mongodb://localhost:27017/admission' ,{ useNewUrlParser: true });
+    var db = mongoose.connect('mongodb://52.201.242.116:27017/admission' ,{ useNewUrlParser: true });
      //var db = mongoose.connect('mongodb://localhost:27017/'+dbname ,{ useNewUrlParser: true });
      /* 1st {}  similiar to where condition,
       2nd {} selecting required fields to show,

@@ -44,7 +44,7 @@ export class SeatAllocComponent implements OnInit {
   }
   search():void{
     this.http.
-    post("http://localhost:3000/api/get_fewstatus",{params: {year: this.seatclass.year, depValue: this.seatclass.depValue }}).
+    post("http://52.201.242.116:3000/api/get_fewstatus",{params: {year: this.seatclass.year, depValue: this.seatclass.depValue }}).
     subscribe(
       data  => {
       console.log("subs loaded successfully ");
@@ -81,7 +81,7 @@ export class SeatAllocComponent implements OnInit {
     if(this.naduraathiri_year){
     //alert(this.naduraathiri_year);
     this.http.
-    post("http://localhost:3000/api/get_status",{params: { year : this.naduraathiri_year }}).
+    post("http://52.201.242.116:3000/api/get_status",{params: { year : this.naduraathiri_year }}).
     subscribe(
       data  => {
       console.log("subs loaded successfully ");
@@ -151,7 +151,7 @@ allocateSeat():void{
 
 console.log("depvalue:" +this.department_arr + "seat allocate:" + this.seatValue_arr);
     this.http.
-    post("http://localhost:3000/api/allocate_seat",
+    post("http://52.201.242.116:3000/api/allocate_seat",
       { params: {department_arr: this.department_arr, seatValue_arr: this.seatValue_arr }}).
    subscribe(
           data  => {
@@ -166,7 +166,7 @@ console.log("depvalue:" +this.department_arr + "seat allocate:" + this.seatValue
         
       //console.log(this.naduraathiri_year);
       
-        this.http.post("http://localhost:3000/api/del_content",{params: {year: this.naduraathiri_year}}).
+        this.http.post("http://52.201.242.116:3000/api/del_content",{params: {year: this.naduraathiri_year}}).
          subscribe(
                 data  => {
                   console.log("deleted successfully ");

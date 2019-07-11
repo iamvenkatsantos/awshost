@@ -67,7 +67,7 @@ export class LoginComponent implements OnInit {
         }*/
         onGetvalueLoginStaff(){
          // alert(this.user.Email);
-          this.http.post("http://localhost:3000/api/staff",this.user).subscribe(
+          this.http.post("http://52.201.242.116:3000/api/staff",this.user).subscribe(
            data=>{
             // alert("post req sucessfull"+this.user);
             // alert(this.user.Email+'\n'+this.user.passWord);
@@ -93,7 +93,7 @@ export class LoginComponent implements OnInit {
           //this.user.Email="";
           
          //alert(this.user1.Email);
-          this.http.post("http://localhost:3000/apinew",this.user1).subscribe(
+          this.http.post("http://52.201.242.116:3000/apinew",this.user1).subscribe(
            data=>{
             // alert("Name:"+this.user1.Email+" "+"password:"+this.user1.passWord+" "+"Confrimpassword:"+this.user1.confrimpassWord);
              console.log("post req sucessfull",data);

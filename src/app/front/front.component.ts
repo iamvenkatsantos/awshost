@@ -74,7 +74,7 @@ export class FrontComponent {
    {
 
     //alert("in value");
-    this.http.post("http://localhost:3000/apinfo",this.user).subscribe(
+    this.http.post("http://52.201.242.116:3000/apinfo",this.user).subscribe(
      data=>{
       //alert("post req sucessfull"+data);
        /*alert(this.user.Fname+'\n'+this.user.Lname+'\n'+this.user.DOB+'\n'+this.user.male+'\n'+this.user.Family_name+'\n'+this.user.Family_occup

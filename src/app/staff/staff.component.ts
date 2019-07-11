@@ -58,7 +58,7 @@ export class StaffComponent implements OnInit {
 
           //fetch all-0 values 
           this.http.
-        get("http://localhost:3000/api/get_chats/show").
+        get("http://52.201.242.116:3000/api/get_chats/show").
         subscribe(
           data  => {
           console.log("chats loaded successfully ");
@@ -80,7 +80,7 @@ export class StaffComponent implements OnInit {
       this.acceptVar = true;
       this.declineVar = false;
       this.http.
-        get("http://localhost:3000/api/get_chats/accept").
+        get("http://52.201.242.116:3000/api/get_chats/accept").
         subscribe(
           data  => {
           console.log("chats loaded successfully ");
@@ -103,7 +103,7 @@ declineFunction():void {
   this.acceptVar = false;
   this.declineVar = true;
   this.http.
-        get("http://localhost:3000/api/get_chats/decline").
+        get("http://52.201.242.116:3000/api/get_chats/decline").
         subscribe(
           data  => {
           console.log("chats loaded successfully ");
@@ -125,7 +125,7 @@ showID(id:String){
   //alert("after:"+id);
 
   {
-    this.http.get("http://localhost:3000/api/update/"+id).subscribe(
+    this.http.get("http://52.201.242.116:3000/api/update/"+id).subscribe(
      data=>{
        //alert("post req sucessfull"+ id);
        //alert(this.staff.Email);
@@ -145,7 +145,7 @@ decline(id:String){
   //alert("after:"+id);
 
   {
-    this.http.get("http://localhost:3000/api/update/decline/"+id).subscribe(
+    this.http.get("http://52.201.242.116:3000/api/update/decline/"+id).subscribe(
      data=>{
       // alert("post req sucessfull"+ id);
        //alert(this.staff.Email);
